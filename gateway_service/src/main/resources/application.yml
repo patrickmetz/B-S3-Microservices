@@ -12,7 +12,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: hello_world
+        - id: helloWorld
           uri: lb://hello-world
           predicates:
             - Path=/hello/**
