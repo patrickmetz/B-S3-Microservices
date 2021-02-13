@@ -1,11 +1,18 @@
 server:
   port: 8080
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+
 spring:
+  application:
+    name: gateway
   cloud:
     gateway:
       routes:
         - id: hello_world
-          uri: http://localhost:8082/
+          uri: lb://hello-world
           predicates:
             - Path=/hello/**
