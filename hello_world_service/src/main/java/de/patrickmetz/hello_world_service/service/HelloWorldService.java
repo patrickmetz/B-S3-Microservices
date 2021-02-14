@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class HelloWorldService implements HelloWorldServiceIF {
-    private static final String TEMPLATE = "Hello, %s!<br/>This is visit no. %d.<br/><br/>My id is %s.";
+    private static final String TEMPLATE = "Hello, %s!<br/>This is visit no. %d.<br/><br/>My id is: %s.";
 
     @Value("${eureka.instance.instance-id}")
     private String instanceId;
