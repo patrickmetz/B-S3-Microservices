@@ -1,0 +1,1 @@
+java -jar .\hello_world_service\build\libs\hello_world_service-0.0.1-SNAPSHOT.jar
