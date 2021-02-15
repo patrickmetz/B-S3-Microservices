@@ -1,1 +1,0 @@
-java -jar .\load_balancing_gateway_service\build\libs\load_balancing_gateway_service-0.0.1-SNAPSHOT.jar
