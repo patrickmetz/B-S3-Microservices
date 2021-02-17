@@ -17,16 +17,8 @@ public class HelloWorldController {
     @Autowired
     HelloWorldViewIF<String> viewString;
 
-    @Autowired
-    private ApplicationContext appContext;
-
     @GetMapping(path = "/hello")
     public String greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return viewString.greeting(name);
-    }
-
-    @GetMapping(path = "/shutdown")
-    public void shutdown()  {
-        SpringApplication.exit(appContext, () -> 0);
     }
 }
