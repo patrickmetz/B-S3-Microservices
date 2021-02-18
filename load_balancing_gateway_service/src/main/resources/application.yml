@@ -13,12 +13,11 @@ spring:
 
 zuul:
   routes:
-    helloWorldHello:
+    helloWorld:
       serviceId: hello-world
-      stripPrefix: true
+      stripPrefix: false
       path: /hello/**
-
     helloWorldShutdown:
       serviceId: hello-world
-      stripPrefix: true
-      path: /actuator/shutdown
+      stripPrefix: false
+      path: /actuator/shutdown/**
