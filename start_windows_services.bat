@@ -28,3 +28,4 @@ echo:
 ping 127.0.0.1 -n 18 > nul
 
 echo Done.
+pause
