@@ -2,22 +2,25 @@ spring:
   application:
     name: hello-world
 
+# Randomisierter Server-Port, um mehrere Instanzen starten zu können.
 server:
   port:  0
 
 eureka:
   client:
     serviceUrl:
+      # Adresse des Registry- und Discovery-Servers.
       defaultZone: http://localhost:8081/eureka
   instance:
+    # Zufällige Identität für die Anmeldung am Registry- und Discovery-Server.
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
+# Schaltet den HTTP/POST-Endpunkt "/actuator/shutdown" frei.
 management:
   endpoints:
     web:
       exposure:
         include: shutdown, info , health
-
   endpoint:
     shutdown:
       enabled: true

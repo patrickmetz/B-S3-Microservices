@@ -2,15 +2,19 @@ spring:
   application:
     name: registry_service
 
+# HTTP-Port, unter dem der Registry- und Discovery-Server erreichbar ist.
 server:
   port: 8081
+
 eureka:
   client:
+    # Registriert sich nicht bei sich selbst.
     registerWithEureka: false
     fetchRegistry: false
+
+    # Endpunkt für den angebotenen Service.
     service-url:
       defaultZone: http://localhost:8081/eureka
   server:
-    response-cache-update-interval-ms: 2
-  instance:
-    hostname: localhost
+    # Cache-Intervall für reibungslose Demonstration reduziert.
+    response-cache-update-interval-ms: 1000

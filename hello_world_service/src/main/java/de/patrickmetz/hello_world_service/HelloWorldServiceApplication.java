@@ -4,6 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+
+/* Die zentrale Applikationsklasse dieses Services.
+
+* Sie ist, durch die Annotation @EnableEurekaClient in der Lage,
+* den Registry- und Discovery-Service zu kontaktieren.
+*/
 @SpringBootApplication
 @EnableEurekaClient
 public class HelloWorldServiceApplication {

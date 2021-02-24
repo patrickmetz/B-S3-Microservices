@@ -1,21 +1,32 @@
 spring:
   application:
     name: load-balancing-gateway
+
+  # Default-Lastverteilung deaktivieren.
+  # Wird stattdessen durch Zuul gehandhabt.
   cloud:
     loadbalancer:
       ribbon:
         enabled: false
 
+# HTTP-Port, unter dem das Gateway für Clients erreichbar ist.
 server:
   port: 8080
 
 eureka:
   client:
     serviceUrl:
+      # Adresse des Registry- und Discovery-Servers.
       defaultZone: http://localhost:8081/eureka
+
+    # ermöglicht registrierte Hello-World-Services abzufragen.
     fetch-registry: true
+
+    # Abfrage-Intervall für reibungslose Demonstration erhöht.
     registry-fetch-interval-seconds: 5
 
+# Clientseitige Endpunkte, die in Wirklichkeit an
+# Hello-World-Services weitergereicht werden.
 zuul:
   routes:
     helloWorld:

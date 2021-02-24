@@ -4,6 +4,9 @@ import de.patrickmetz.hello_world_service.service.HelloWorldServiceIF;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/*
+Siehe Interface-Dokumentation.
+*/
 @Component
 public class HelloWorldView implements HelloWorldViewIF<String> {
     @Autowired
